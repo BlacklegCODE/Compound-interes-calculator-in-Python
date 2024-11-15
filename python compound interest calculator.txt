@@ -1,0 +1,24 @@
+#python compound interest calculator
+
+p = 0
+r = 0
+t = 0
+
+while p <= 0:
+    p = float(input("Enter principle amount "))
+    if p <= 0:
+        print("Principle cant be lses than or equal to zero")
+
+while r <= 0:
+    r = float(input("Enter rate of interest :"))
+    if r <= 0:
+        print("Interest rate can not be less than or equal to zero")
+
+while t <=0:
+    t = int(input("Enter the span of time (years) :"))
+    if t <=0:
+        print("Time can never be less than or equal to zero")
+
+a = p* pow((1+r/100),t)
+
+print(f"Final amount is : {a:.2f}")
